@@ -12,21 +12,6 @@ app.use(express.json());
 
 
 app.post('/helius', async(req, res) => {
-    // const fromAddress = req.body.fromAddress;
-    // const toAddress = req.body.toAddress;
-    // const amount = req.body.amount;
-    // const type = "received_native_sol";
-
-    // if (type === "received_native_sol") {
-    //     await mintTokens(fromAddress, toAddress, amount);
-    // } else {
-    //     // What could go wrong here?
-    //     await burnTokens(fromAddress, toAddress, amount);
-    //     await sendNativeTokens(fromAddress, toAddress, amount);
-    // }
-
-    // res.send('Transaction successful');
-
     try {
         const data = req.body[0];
         if (processedTransfers[data.signature]) {
